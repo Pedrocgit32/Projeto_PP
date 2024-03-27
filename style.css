@@ -1,0 +1,84 @@
+body{
+    /* iPhone 13 / 13 Pro - 1 */
+
+position: relative;
+width: 390px;
+height: 844px;
+
+background: linear-gradient(180deg, #0066FF 61.46%, #08C492 100%);
+
+}
+
+#entrar{
+/* Rectangle 4 */
+
+position: absolute;
+left: 35%;
+right: 40%;
+top: 80%;
+bottom: 15%;
+
+background: rgba(0, 26, 255, 0.34);
+border-radius: 20px;
+
+/* Entrar */
+
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+}
+
+#fsc{
+    /* Rectangle 3 */
+
+position: absolute;
+left: 25%;
+right: 30%;
+top: 90%;
+bottom: 2%;
+
+background: rgba(0, 26, 255, 0.15);
+border-radius: 20px;
+
+/* Faça o seu cadastro */
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
+
+color: rgba(0, 71, 255, 0.98);
+
+
+}
+
+#npl{
+    /* Não possui login? */
+
+position: absolute;
+width: 291px;
+height: 100px;
+left: calc(50% - 291px/2 - 0.5px);
+top: 663px;
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+text-align: center;
+
+color: rgba(0, 26, 255, 0.52);
+
+
+}
