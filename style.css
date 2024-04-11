@@ -28,7 +28,7 @@ bottom: 15%;
 
 background: rgba(0, 26, 255, 0.34);
 border-radius: 20px;
-
+border-color: rgba(0, 26, 255, 0);
 /* Entrar */
 
 
@@ -55,6 +55,7 @@ bottom: 2%;
 
 background: rgba(0, 26, 255, 0.15);
 border-radius: 20px;
+border-color: rgba(0, 26, 255, 0);
 
 /* Faça o seu cadastro */
 
@@ -132,14 +133,15 @@ color: #07BA58;
 
 }
 
+
 #email{
     /* Rectangle 1 */
 
 box-sizing: border-box;
 
 position: absolute;
-width: 210px;
-height: 17px;
+width: 26vh;
+height: 3vh;
 left: calc(50% - 214px/2);
 top: 523px;
 
@@ -155,13 +157,65 @@ border-radius: 10px;
 box-sizing: border-box;
 
 position: absolute;
-width: 210px;
-height: 17px;
+width: 26vh;
+height: 3vh;
 left: calc(50% - 214px/2);
-top: 74vh;
+top: 70.3vh;
 
 background: #FFFFFF;
 border: 2px solid #A9BF04;
 border-radius: 10px;
+
+}
+
+#logo{
+    /* Design sem nome (5) 1 */
+
+position: absolute;
+width: 186px;
+height: 174px;
+left: calc(50% - 186px/2);
+top: 109px;
+
+}
+
+#title1{
+    /* Seja bem vindo ao: */
+
+position: absolute;
+width: 289px;
+height: 41px;
+left: calc(50% - 289px/2 - 0.5px);
+top: 48px;
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+
+color: #07BA58;
+
+}
+
+#title2{
+    /* RIVERMAP */
+
+position: absolute;
+width: 273px;
+height: 41px;
+left: calc(50% - 273px/2 - 0.5px);
+top: 299px;
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+
+color: #07BA58;
+
 
 }
