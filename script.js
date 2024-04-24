@@ -1,6 +1,15 @@
 let button = document.getElementById("criar");
 
 button.onclick = async function() {
-    let title = document.getElementById("").value;
-    
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+    let cpf = document.getElementById("cpf").value;
+    let cep = document.getElementById("cep").value;
+    let data = {nome,email,senha,cpf,cep}
+
+    const reseponse = await fetch('http://localhost:3005/api/store/task', {
+        method: "POST",
+        headers: 
+    });
 }
