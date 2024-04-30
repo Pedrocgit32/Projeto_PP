@@ -41,7 +41,7 @@
         
     }
     
-    #ftp{
+    .ftp{
         /* Design sem nome (7) 1 */
         
         position: absolute;
@@ -62,7 +62,7 @@
         left: calc(50% - 201px/2 + 0.5px);
         top: 443px;
         
-        font-family: 'Kavoon';
+        font-family: 'Kavoon', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
