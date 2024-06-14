@@ -13,3 +13,9 @@ function previewImage(event) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+let button = document.getElementById("pronto");
+
+button.onclick = async function() {
+    window.location.pathname = "/front/map.html"
+};
