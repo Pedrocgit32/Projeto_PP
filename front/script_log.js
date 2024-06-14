@@ -16,3 +16,17 @@ fetch('riodosinos.geojson')
             }
         }).addTo(map);
     });
+
+// Coordenadas dos pontos de localização próximos ao rio
+var pontosDeLocalizacao = [
+    [-29.752480, -51.178569],
+    [-29.751330, -51.166170],
+    [-29.749570, -51.153770],
+    [-29.748080, -51.142540],
+    [-29.746050, -51.130140]
+];
+
+// Adiciona marcadores vermelhos no mapa
+pontosDeLocalizacao.forEach(function(coord) {
+    L.marker(coord, {icon: L.icon({iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41], iconColor: 'red'})}).addTo(map);
+});
