@@ -6,8 +6,8 @@ async function handleSubmit(event) {
   
     const data = {email, senha};
   
-    const response = await fetch("http://localhost:3005/api/login", {
-      method: "POST",
+    const response = await fetch("http://localhost:3005/api/get/login", {
+      method: "GET",
       headers: {"Content-Type":"application/json;charset=UTF-8"},
       body: JSON.stringify(data)
     });
@@ -16,8 +16,12 @@ async function handleSubmit(event) {
   
     if (result.success) {
       console.log(result.data)
-      window.location.href = "/front/Cadastro.html";
+      let button = document.getElementById("entrar");
+      button.onclick = async function() {
+      window.location.href = "/front/map.html";
+    }
     } else {
       alert(result.message);
     }
+
   };
