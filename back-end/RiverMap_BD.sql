@@ -20,6 +20,9 @@ SELECT * FROM users_rvmap;
 
 CREATE TABLE tables_feadbeecks(
 	nome_use VARCHAR(255),
-    coment VARCHAR(255) NOT NULL,
-    imagem VARCHAR(255) NOT NULL
-)
+    coment VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE image(
+	imagem VARCHAR(255) NOT NULL
+);
