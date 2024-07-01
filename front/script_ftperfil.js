@@ -17,5 +17,5 @@ function previewImage(event) {
 let button = document.getElementById("pronto");
 
 button.onclick = async function() {
-    window.location.pathname = "/front/index.html"
+    window.location.pathname = "/front/index_login.html"
 };

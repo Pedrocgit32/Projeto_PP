@@ -20,7 +20,7 @@ button.onclick = async function() {
         // alert("Sucesso")
         window.location.pathname = "/front/foto_perfil.html"
     } else {
-        alert('Não');
+        alert('Não deu');
     }
 }
 
