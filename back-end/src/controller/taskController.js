@@ -35,45 +35,40 @@ async function storeTask(request, response) {
 }
 
 async function Getlogin(request, response) {    
-    const email = request.query.email;
-    const senha = request.query.senha;
-    const query = "SELECT email, senha FROM users_rvmap WHERE email = ?";
+    const email = Array(request.body.email);
 
-    connection.query(query, [email], (err, results) => {    
-        if (err) {
-            response
-                .status(400)
-                .json({
-                    success: false,
-                    message: "Sem Sucesso!",
-                    data: err
-                });
-        } else if (results.length > 0) {
-            const senhaQuery = results[0].senha;
-  
-            if (senha === senhaQuery) {
+    const query = "SELECT nome, email, senha, cpf, cep FROM users_rvmap WHERE email = ?";
+
+    connection.query(query, email, (err, results) => {    
+        console.log("erro", err)
+        if (results.length > 0) {
+            const senha = request.body.senha;
+            const senhaquery = results[0].senha;
+            
+            if (senha === senhaquery){
                 response
                     .status(200)
                     .json({
                         success: true,
-                        message: "Sucesso!",
+                        message: "Senha correta",
                         data: results
-                    });
+                    })
             } else {
                 response
                     .status(400)
                     .json({
                         success: false,
-                        message: "Senha incorreta!"
-                    });
-            }
+                        message: "Senha incorreta"
+                    })
+            }       
         } else {
             response
-                .status(404)
+                .status(400)
                 .json({
                     success: false,
-                    message: "Usuário não encontrado!"
-                });
+                    message: "Sem sucesso",
+                    data: err
+                })
         }
     });
 }
