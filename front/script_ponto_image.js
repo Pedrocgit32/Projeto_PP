@@ -17,5 +17,5 @@ function previewImage(event) {
 let button = document.getElementById("seguir");
 
 button.onclick = async function() {
-    window.location.pathname = "/front/"
+    window.location.pathname = "/front/add_feedback.html"
 };
