@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* iPhone 13 / 13 Pro - 12 */
+
+position: relative;
+width: 390px;
+height: 844px;
+align-items: center;
+
+background: linear-gradient(180deg, #0066FF 62.5%, #08C492 100%);
+
+}
+
+#title1{
+/* Agora fale um pouco mais sobre a situação do rio e */
+
+position: absolute;
+width: 361px;
+height: 148px;
+left: calc(50% - 361px/2 - 1.5px);
+top: 29px;
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+
+color: #07BA58;
+
+
+
+}
+
+#title2{
+    /* adicione um ponto de poluição */
+
+position: absolute;
+width: 364px;
+height: 129px;
+left: calc(50% - 364px/2 - 3px);
+top: 105px;
+
+font-family: 'Kavoon';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+
+color: #07BA58;
+
+
+}
+
+.fti{
+    position: absolute;
+    width: 191px;
+    height: 190px;
+    left: calc(50% - 191px/2 + 0.5px);
+    top: 253px;
+}
+
+#file{
+    /* Adicione aqui a foto da poluição ou do rio */
+
+position: absolute;
+width: 256px;
+height: 50px;
+left: 66px;
+top: 430px;
+
+
+}
+
+
+#feed{
+    /* Rectangle 4 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 318px;
+    height: 258px;
+    left: calc(50% - 318px/2);
+    top: 513px;
+
+    background: #FFFFFF;
+    border: 2px solid #07BA58;
+    border-radius: 10px;
+
+
+}
+
+#feito{
+    /* Component 10 */
+
+    position: absolute;
+    width: 136px;
+    height: 37px;
+    left: calc(50% - 136px/2 - 6px);
+    top: 784px;
+
+
+
+
+/* Rectangle 5 */
+
+/* position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%; */
+
+background: rgba(0, 26, 255, 0.34);
+border-radius: 20px;
+border-color: rgba(0, 26, 255, 0);
+
+    /* Criar */
+
+
+
+    font-family: 'Kavoon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #FFFFFF; 
+
+
+
+
+}

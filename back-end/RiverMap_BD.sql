@@ -10,19 +10,19 @@ CREATE TABLE users_rvmap(
     cep VARCHAR (255) NOT NULL
 ); 
 
-DROP TABLE users_rvmap;
-
 INSERT INTO users_rvmap (nome, email, senha, cpf, cep)
 VALUES ('Lorenzo', 'lorenzo@email.com', 'Lr1234@', '056.344.233-09', '93050-590'),
 ('Gustavo', 'gustavo@email.com', 'Gt1235#', '098.446.413-90', '94050-560');
 
 SELECT * FROM users_rvmap;
 
-CREATE TABLE tables_feadbeecks(
-	nome_use VARCHAR(255),
-    coment VARCHAR(255) NOT NULL
+CREATE TABLE feedbacks(
+	id int not null auto_increment primary key,
+    file varchar(255) not null,
+	id_user int not null,
+    comment VARCHAR(255) NOT NULL,
+    created_at timestamp default current_timestamp,
+    foreign key (id_user) references users_rvmap(id)
 );
 
-CREATE TABLE image(
-	imagem VARCHAR(255) NOT NULL
-);
+select*from feedbacks;
