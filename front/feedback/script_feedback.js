@@ -1,9 +1,11 @@
+let button = document.getElementById("feito");
+
 async function handleSubmit(event) {
     event.preventDefault();
 
     let fm = new FormData();
 
-    fm.append('file', document.getElementById('file').value[0]);
+    fm.append('file', document.getElementById('file').files[0]);
     fm.append('comment', document.getElementById('feed').value);
 
     const response = await fetch('http://localhost:3005/api/store/feed', {
