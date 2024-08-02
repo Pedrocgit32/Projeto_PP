@@ -25,4 +25,4 @@ CREATE TABLE feedbacks(
     foreign key (id_user) references users_rvmap(id)
 );
 
-select*from feedbacks;
+select * from feedbacks;
