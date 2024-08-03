@@ -5,39 +5,27 @@ async function handleSubmit(event) {
 
     let fm = new FormData();
 
-    fm.append('file', document.getElementById('file').files[0]);
+    // fm.append('file', document.getElementById('file').files[0]); // Corrigido para usar .files
     fm.append('comment', document.getElementById('feed').value);
 
-    const response = await fetch('http://localhost:3005/api/store/feed', {
-        method: "POST",
-        headers: {
-            "Content-Type":"application/json"
-        },
-        body: fm
-    });
+    try {
+        const response = await fetch("http://localhost:3005/api/store/feed", {
+            method: "POST",
+            headers: { "Content-Type": "application/json;charset=UTF-8" },
+            body: fm
+        });
 
-    const result = response.json();
+        const result = await response.json(); // Adicionado await
 
-    if(result.success) {
-        alert(result.message);
-    } else {
-        alert(result.message);
-    }
-}
-
-//função de selecionar uma imagem 
-function previewImage(event) {
-    var input = event.target;
-    var preview = document.getElementById('image');
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            preview.src = e.target.result;
-            preview.style.display = 'block';
+        if (result.success) {
+            alert(result.message);
+        } else {
+            alert(result.message);
         }
-
-        reader.readAsDataURL(input.files[0]);
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Ocorreu um erro ao enviar o formulário.");
     }
 }
+
+button.addEventListener("click", handleSubmit);

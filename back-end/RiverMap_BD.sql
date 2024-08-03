@@ -26,3 +26,4 @@ CREATE TABLE feedbacks(
 );
 
 select * from feedbacks;
+INSERT INTO feedbacks( id_user, comment) VALUES('2','O rio está imundo!');
