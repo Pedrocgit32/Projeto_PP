@@ -18,7 +18,7 @@ button.onclick = async function() {
 
     if(content.success) {
         // alert("Sucesso")
-        window.location.pathname = "/front/foto_perfil.html"
+        window.location.pathname = "/front/index_login.html"
     } else {
         alert('Não deu');
     }

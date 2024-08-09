@@ -1,24 +1,28 @@
 // Cria o mapa e define a visualização inicial
-var map = L.map('map').setView([-29.768, -51.146], 13);
+var map = L.map('map').setView([-29.75831429389668, -51.15101134694835], 13);
 
 // Adiciona o tile layer do OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-const marker = L.marker([-29.749570, -51.153770]).addTo(map);
-// Coordenadas dos pontos de localização próximos ao rio
-// var pontosDeLocalizacao = [
-//     // [-29.752480, -51.178569],
-//     // [-29.751330, -51.166170],
-//     // [-29.749570, -51.153770]
-//     // [-29.748080, -51.142540],
-//     // [-29.746050, -51.130140]
-// ];
+const marker = L.marker([-29.757926, -51.149658]).addTo(map);
 
-// Adiciona marcadores vermelhos no mapa
-// marker.forEach(function(coord) {
-//     L.marker(coord, {icon: L.icon({iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png', iconSize: [25, 40], iconAnchor: [12, -59], popupAnchor: [1, -34], shadowSize: [41, 41], iconColor: 'red'})}).addTo(map);
-// });
+// Faz a requisição para a API para recuperar a imagem e o comentário
+fetch('http://localhost:3005/api/store/feed')
+    .then(response => response.json())
+    .then(data => {
+        // Supondo que o retorno da API seja algo como { imagemUrl: "url_da_imagem", comentario: "Texto do comentário" }
+        const popupContent = `
+            <b>${data.comment}</b><br>
+            <img src="${data.file}" alt="Imagem do local" style="width:100px;height:auto;">
+        `;
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        // Adiciona o conteúdo ao popup do marcador
+        marker.bindPopup(popupContent).openPopup();
+    })
+    .catch(error => {
+        console.error('Erro ao carregar os dados da API:', error);
+        marker.bindPopup("<b>Erro ao carregar os dados!</b>").openPopup();
+    });
+
