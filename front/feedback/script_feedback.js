@@ -16,13 +16,14 @@ async function handleSubmit(event) {
             body: formData
         });
 
-    //     const result = await response.json(); // Adicionado await
+        const result = await response.json(); // Adicionado await
 
-    //     if (result.success) {
-    //         alert(result.message);
-    //     } else {
-    //         alert(result.message);
-    //     }
+        if (result.success) {
+            alert(result.message);
+            window.location.href = "map.html"
+        } else {
+            alert(result.message);
+        }
     } catch (error) {
         console.error("Error:", error);
         alert("Ocorreu um erro ao enviar o formulário.");
