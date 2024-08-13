@@ -16,7 +16,7 @@ async function storeFeed(request, response) {
                 .status(200)
                 .json({
                     success: true,
-                    message: "Sucesso",
+                    message: "Seu feedback foi cadastrado com sucesso!",
                     data: results
                 });
             } else {
