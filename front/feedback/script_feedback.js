@@ -5,7 +5,7 @@ async function handleSubmit(event) {
 
     formData.append('file', document.getElementById('file').files[0]); // Corrigido para usar .files
     formData.append('comment', document.getElementById('feed').value);
-    formData.append('id_user', 2);
+    formData.append('id_user', 1);
 
     console.log(formData.get('file'))
     console.log(formData.get('comment'))
