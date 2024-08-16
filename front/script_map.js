@@ -24,7 +24,7 @@ async function getFeed() {
     const results = await response.json();
   
     if(results.success) {
-        let feeds = results.data;
+        let feeds = await results.data;
         console.log(feeds)
 
         const popupContent = `
@@ -37,15 +37,18 @@ async function getFeed() {
             <img src="${images + feeds[1].file}" alt="Imagem do local" style="width:100px;height:auto;">
         `;
         
-        const popupContent3 = `
-            <b>${feeds[2].comment}</b><br>
-            <img src="${images + feeds[2].file}" alt="Imagem do local" style="width:100px;height:auto;">
-        `;
-        const popupContent4 = `
-            <b>${feeds[3].comment}</b><br>
-            <img src="${images + feeds[3].file}" alt="Imagem do local" style="width:100px;height:auto;">
-        `;
+        // const popupContent3 = `
+        //     <b>${feeds[2].comment}</b><br>
+        //     <img src="${images + feeds[2].file}" alt="Imagem do local" style="width:100px;height:auto;">
+        // `;
+        // const popupContent4 = `
+        //     <b>${feeds[3].comment}</b><br>
+        //     <img src="${images + feeds[3].file}" alt="Imagem do local" style="width:100px;height:auto;">
+        // `;
         
+        
+
+
         marker.bindPopup(popupContent).openPopup();
         marker2.bindPopup(popupContent2).openPopup();
         marker3.bindPopup(popupContent3).openPopup();
