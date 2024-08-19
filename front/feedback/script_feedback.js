@@ -19,8 +19,8 @@ async function handleSubmit(event) {
         const result = await response.json(); // Adicionado await
 
         if (result.success) {
-            alert(result.message);
-            window.location.href = "map.html"
+            console.log(result.message)
+            window.location.href = "/front/map.html";
         } else {
             alert(result.message);
         }

@@ -30,12 +30,13 @@ async function getFeed() {
         const popupContent = `
             <b>${feeds[0].comment}</b><br>
             <img src="${images + feeds[0].file}" alt="Imagem do local" style="width:100px;height:auto;">
+            
         `;
         
-        const popupContent2 = `
-            <b>${feeds[1].comment}</b><br>
-            <img src="${images + feeds[1].file}" alt="Imagem do local" style="width:100px;height:auto;">
-        `;
+        // const popupContent2 = `
+        //     <b>${feeds[1].comment}</b><br>
+        //     <img src="${images + feeds[1].file}" alt="Imagem do local" style="width:100px;height:auto;">
+        // `;
         
         // const popupContent3 = `
         //     <b>${feeds[2].comment}</b><br>
@@ -59,24 +60,3 @@ async function getFeed() {
 }}
 
 getFeed();
-
-
-
-
-// fetch('http://localhost:3005/api/posts')
-//     .then(response => response.json())
-//     .then(data => {
-//         // Supondo que o retorno da API seja algo como { imagemUrl: "url_da_imagem", comentario: "Texto do comentário" }
-//         const popupContent = `
-//             <b>${data.comment}</b><br>
-//             <img src="${data.file}" alt="Imagem do local" style="width:100px;height:auto;">
-//         `;
-
-//         // Adiciona o conteúdo ao popup do marcador
-//         marker.bindPopup(popupContent).openPopup();
-//     })
-//     .catch(error => {
-//         console.error('Erro ao carregar os dados da API:', error);
-//         marker.bindPopup("<b>Erro ao carregar os dados!</b>").openPopup();
-//     });
-
