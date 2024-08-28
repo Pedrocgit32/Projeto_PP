@@ -1,7 +1,7 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function storeTask(request, response) {
+async function StoreCadastro(request, response) {
 
     const params = [
         request.body.nome,
@@ -74,6 +74,6 @@ async function Getlogin(request, response) {
 }
 
 module.exports = {
-    storeTask,
+    StoreCadastro,
     Getlogin
 };

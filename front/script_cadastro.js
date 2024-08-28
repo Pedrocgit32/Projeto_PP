@@ -8,7 +8,7 @@ button.onclick = async function() {
     let cep = document.getElementById("cep").value;
     let data = {nome,email,senha,cpf,cep}
 
-    const response = await fetch('http://localhost:3005/api/store/task', {
+    const response = await fetch('http://localhost:3005/api/store/cadastro', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(data)

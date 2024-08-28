@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 
+@media  screen and (min-width: 390px) and (max-width: 844px){
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
     body{
         /* iPhone 13 / 13 Pro - 2 */
         
@@ -73,7 +74,7 @@
         justify-content: space-evenly;
         
         label{
-
+            
             /* Email: */
             
             left: 17.97%;
@@ -140,3 +141,148 @@
         
         
     }
+    
+}
+
+@media  screen and (min-width: 1024px){
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        /* iPhone 13 / 13 Pro - 2 */
+        
+        position: relative;
+        width: 1024px;
+        height: 844px;
+        
+        background: linear-gradient(180deg, #0066FF 62.5%, #08C492 100%);
+        
+    }
+    
+    #title_cad{
+        /* Cadastro */
+        
+        position: absolute;
+        width: 289px;
+        height: 45px;
+        left: calc(50% - 289px/2 + 0.5px);
+        top: 48px;
+        
+        font-family: 'Kavoon';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        
+        color: #07BA58;
+        
+        
+    }
+    
+    #inform{
+        /* informe seus dados: */
+        
+        position: absolute;
+        width: 291px;
+        height: 74px;
+        left: calc(50% - 291px/2 + 0.5px);
+        top: 173px;
+        
+        font-family: 'Kavoon';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        
+        color: #07BA58;
+        
+        
+    }
+    
+    .form_cad{
+        /* Component 11 */
+        
+        position: absolute;
+        display: flex;
+        height: 37vh;
+        left: 87px;
+        top: 303px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        label{
+            
+            position: relative;
+            left: 37.7vh;
+            right: 17.97%;
+            top: -1%;
+            bottom: 93.44%;
+            
+            font-family: 'Kavoon';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            
+            color: #07BA58;
+            
+            
+        }
+        
+        
+        input{
+            /* Rectangle 1 */
+            
+            
+            position: relative;
+            left: 37.7vh;
+            width: 26vh;
+            height: 2.5vh;
+            top: -1vh;
+            bottom: 84.69%;
+            
+            background: #FFFFFF;
+            border: 2px solid #07BA58;
+            border-radius: 10px;
+            
+        }
+    }
+    
+    #criar{
+        /* Component 3 */
+        
+        position: absolute;
+        width: 136px;
+        height: 37px;
+        left: calc(50% - 136px/2);
+        top: 667px;
+        
+        /* Rectangle 5 */
+        
+        
+        background: rgba(0, 26, 255, 0.34);
+        border-radius: 20px;
+        border-color: rgba(0, 26, 255, 0);
+        /* Criar */
+        
+        
+        font-family: 'Kavoon';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        
+        color: #FFFFFF;
+        
+        
+    }
+}
