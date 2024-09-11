@@ -101,7 +101,7 @@
     /* Email: */
     
     position: absolute;
-    width: 16vh;
+    width: 15vh;
     height: 50vh;
     left: calc(50% - 139px/2 - 0.5px);
     top: 58vh;
@@ -122,7 +122,7 @@
     /* Senha: */
     
     position: absolute;
-    width: 16vh;
+    width: 15vh;
     height: 50vh;
     left: calc(50% - 139px/2 - 0.5px);
     top: 66vh;
@@ -148,7 +148,7 @@
     position: absolute;
     width: 26vh;
     height: 3vh;
-    left: calc(50% - 214px/2);
+    left: calc(48% - 214px/2);
     top: 523px;
     justify-content: center;
     
@@ -166,7 +166,7 @@
     position: absolute;
     width: 26vh;
     height: 3vh;
-    left: calc(50% - 214px/2);
+    left: calc(48% - 214px/2);
     top: 70.3vh;
     justify-content: center;
     
