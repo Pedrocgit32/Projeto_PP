@@ -16,7 +16,7 @@
         height: 844px;
         align-items: center;
         
-        background: linear-gradient(180deg, #0066FF 61.46%, #08C492 100%);
+        background-color: #2446F0;
         
     }
     
@@ -28,9 +28,9 @@
         right: 40%;
         top: 80%;
         bottom: 15%;
-        justify-content: center;
         
-        background: rgba(0, 26, 255, 0.34);
+        
+        background: #292AEB;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         /* Entrar */
@@ -54,10 +54,10 @@
         position: absolute;
         left: 25%;
         right: 30%;
-        top: 90%;
-        bottom: 2%;
+        top: 93%;
+        bottom: -2%;
         
-        background: rgba(0, 26, 255, 0.15);
+        background: #292AEB;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         
@@ -71,7 +71,7 @@
         text-align: center;
         justify-content: center;
         
-        color: rgba(0, 71, 255, 0.98);
+        color:#FFFFFF;
         
         
     }
@@ -82,7 +82,7 @@
     position: absolute;
     width: 33vh;
     left: calc(50% - 291px/2 - 0.5px);
-    top: 85.6vh;
+    top: 87.2vh;
 
     font-family: 'Kavoon';
     font-style: normal;
@@ -92,7 +92,7 @@
     text-align: center;
     justify-content: center;
 
-    color: rgba(0, 26, 255, 0.52);
+    color: #FFFFFF;
 
 
 }
@@ -153,7 +153,7 @@
     justify-content: center;
     
     background: #FFFFFF;
-    border: 2px solid #A9BF04;
+    border: 2px solid #07BA58;
     border-radius: 10px;
     
 }
@@ -171,7 +171,7 @@
     justify-content: center;
     
     background: #FFFFFF;
-    border: 2px solid #A9BF04;
+    border: 2px solid #07BA58;
     border-radius: 10px;
     
 }
@@ -247,8 +247,7 @@ top: 109px;
         height: 844px;
         align-items: center;
         
-        background: linear-gradient(180deg, #0066FF 61.46%, #08C492 100%);
-        
+        background-color: #2446F0;        
     }
     
     #entrar{
@@ -261,7 +260,7 @@ top: 109px;
         bottom: 17%;
         
         
-        background: rgba(0, 26, 255, 0.34);
+        background: #292AEB;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         /* Entrar */
@@ -285,11 +284,11 @@ top: 109px;
         position: absolute;
         left: 40%;
         right: 44%;
-        top: 90%;
-        bottom: 2%;
+        top: 92%;
+        bottom: -1%;
         width: 23vh;
         
-        background: rgba(0, 26, 255, 0.15);
+        background: #292AEB;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         
@@ -302,7 +301,7 @@ top: 109px;
         line-height: 3.6vh;
         text-align: center;
         
-        color: rgba(0, 71, 255, 0.98);
+        color: #FFFFFF;
         
         
     }
@@ -313,7 +312,7 @@ top: 109px;
         position: absolute;
         width: 34vh;
         left: calc(50% - 291px/2 - 0.5px);
-        top: 85.6vh;
+        top: 85.9vh;
 
         font-family: 'Kavoon';
         font-style: normal;
@@ -323,7 +322,7 @@ top: 109px;
         text-align: center;
         justify-content: center;
 
-        color: rgba(0, 26, 255, 0.52);
+        color: #FFFFFF;
 
 
     }
