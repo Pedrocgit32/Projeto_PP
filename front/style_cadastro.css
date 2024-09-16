@@ -15,7 +15,7 @@
         width: 390px;
         height: 844px;
         
-        background: linear-gradient(180deg, #0066FF 62.5%, #08C492 100%);
+        background-color: #265DFF;
         
     }
     
@@ -35,7 +35,7 @@
         line-height: 50px;
         text-align: center;
         
-        color: #07BA58;
+        color: #89c853;
         
         
     }
@@ -56,7 +56,7 @@
         line-height: 40px;
         text-align: center;
         
-        color: #07BA58;
+        color: #89c853;
         
         
     }
@@ -89,7 +89,7 @@
             line-height: 25px;
             text-align: center;
             
-            color: #07BA58;
+            color: #89c853;
             
             
         }
@@ -106,7 +106,7 @@
             bottom: 84.69%;
             
             background: #FFFFFF;
-            border: 2px solid #07BA58;
+            border: 2px solid #89c853;
             border-radius: 10px;
             
         }
@@ -124,7 +124,7 @@
         /* Rectangle 5 */
         
         
-        background: rgba(0, 26, 255, 0.34);
+        background: #3526FF;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         /* Criar */
@@ -159,7 +159,7 @@
         width: 1024px;
         height: 844px;
         
-        background: linear-gradient(180deg, #0066FF 62.5%, #08C492 100%);
+        background-color: #265DFF;
         
     }
     
@@ -179,7 +179,7 @@
         line-height: 50px;
         text-align: center;
         
-        color: #07BA58;
+        color: #89c853;
         
         
     }
@@ -200,7 +200,7 @@
         line-height: 40px;
         text-align: center;
         
-        color: #07BA58;
+        color: #89c853;
         
         
     }
@@ -232,7 +232,7 @@
             line-height: 25px;
             text-align: center;
             
-            color: #07BA58;
+            color: #89c853;
             
             
         }
@@ -250,7 +250,7 @@
             bottom: 84.69%;
             
             background: #FFFFFF;
-            border: 2px solid #07BA58;
+            border: 2px solid #89c853;
             border-radius: 10px;
             
         }
@@ -268,7 +268,7 @@
         /* Rectangle 5 */
         
         
-        background: rgba(0, 26, 255, 0.34);
+        background: #3526FF;
         border-radius: 20px;
         border-color: rgba(0, 26, 255, 0);
         /* Criar */
