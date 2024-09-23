@@ -12,9 +12,11 @@
 <body>
 
       <header>
-        <nav class="navbar bg-primary fixed-top">
+        <br>
+        <br>
+        <nav class="navbar fixed-top" id="navbar">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#" id=""> Bem-Vindo ao RiverMap</a>
+                <a class="navbar-brand" href="#" id="a"> Bem-Vindo ao RiverMap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,9 +28,24 @@
                   <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/front/feedback/add_feedback.html">Adicionar feedback</a>
+                        <a class="nav-link active" aria-current="page" href="/front/feedback/add_feedback.html" id="a">Adicionar feedback</a>
+                        <a class="nav-link active" aria-current="page" href="#" id="a">Sobre</a>
                       </li>
-                      
+                      <li class="nav-item dropdown" id="dropdown">
+                        <a class="nav-link dropdown-toggle" id="a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Links para denuncia
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" id="a" href="https://www.gov.br/ana/pt-br/assuntos/regulacao-e-fiscalizacao/fiscalizacao/denuncie-aqui">Agência Nacional de Águas (ANA)</a></li>
+                          <li><a class="dropdown-item" id="a" href="https://www.sema.rs.gov.br/recursos-hidricos">DRHS</a></li>
+                          <li><a class="dropdown-item" id="a" href="https://www.greenpeace.org/brasil/faca-uma-denuncia-ambiental/#:~:text=Pol%C3%ADcia%20Florestal%20e%20de%20Mananciais,.protecaoanimalmundial.org.br.">Greenpeace</a></li>
+                          <li>
+                            <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" id="a" href="#">Educação Ambiental Itinerante (Pró-sinos)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                     </ul>
                     <a type="button" class="btn btn-danger" id="❌" href="index_login.html">Sair</a>
                   </div>

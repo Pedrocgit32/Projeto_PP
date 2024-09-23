@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
 #map {
     height: 100vh;
     width: 100%;
@@ -5,7 +7,23 @@
 
 #❌{
     margin-top: 50vh;
-    margin-left: 36vw;
+    margin-left: 8vw;
     width: 10vh;
 
 }
+
+#navbar{
+    background-color: #265DFF;
+}
+
+#a{
+    font-family: 'Kavoon';
+    color: #89c853 !important;
+}
+
+#offcanvasNavbar{
+    background-color: #265DFF;
+    font-family: 'Kavoon';
+    color: #89c853;
+}
+
