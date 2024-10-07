@@ -28,7 +28,7 @@ button.onclick = async function() {
         }
 
     }else{
-        alert("CEP inválido.")
+        alert("CEP inválido (coloque um CEP que comece com '930')")
         window.location.pathname = "/front/Cadastro.html"
     }
     
