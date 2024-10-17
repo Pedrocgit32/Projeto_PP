@@ -41,3 +41,50 @@
         color: #89c853;
     }
 }
+
+@media  screen and (min-width: 1024px){ 
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    body{
+        
+        width: 1024px;
+        height: 844px;
+        
+        
+        background-color: #265DFF;
+        
+    }
+
+    #nav{
+        background-color: #1a4ce3!important;
+        font-family: 'Kavoon';
+    }
+
+    a{
+        color: #89c853!important;
+    }
+
+    #log{
+        position: relative;
+        width: 22vh;
+        height: 22vh;
+        left: 41vw;
+        top: 3vw;
+    }
+
+    #title{
+        position: relative;
+        left: 44.4vw;
+        top: 10vw;
+        font-family: 'Kavoon';
+        color: #89c853;
+    }
+
+    p{
+        
+    }
+}
