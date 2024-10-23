@@ -40,6 +40,17 @@
         font-family: 'Kavoon';
         color: #89c853;
     }
+
+    #text{
+        font-family: 'Kavoon';
+        color: #89c853;
+        position: relative;
+        top: 7vh;
+        font-size: 14px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 @media  screen and (min-width: 1024px){ 
@@ -84,7 +95,14 @@
         color: #89c853;
     }
 
-    p{
-        
+    #text{
+        font-family: 'Kavoon';
+        color: #89c853;
+        position: relative;
+        top: 15vh;
+        font-size: 14px;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
