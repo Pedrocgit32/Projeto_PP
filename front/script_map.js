@@ -9,6 +9,21 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Array para armazenar os marcadores adicionados pelo usuário
 let userMarkers = [];
 
+// Evento para capturar cliques no mapa e adicionar marcadores
+map.on('click', function (e) {
+    const { lat, lng } = e.latlng;
+
+    // Adiciona um marcador na posição clicada
+    const newMarker = L.marker([lat, lng]).addTo(map);
+    userMarkers.push(newMarker);
+
+    // Associa um popup simples ao novo marcador
+    newMarker.bindPopup('<b>Marcador Adicionado!</b><br>Clique em outro local ou finalize.');
+
+    // Quando o marcador é clicado, ele pode exibir mais informações posteriormente
+    attachPopup(newMarker, userMarkers.length - 1);
+});
+
 // Função para exibir o popup em marcadores personalizados
 async function attachPopup(marker, index) {
     const images = 'http://localhost:3005/uploads/';
@@ -35,40 +50,11 @@ async function attachPopup(marker, index) {
     }
 }
 
-// Evento para capturar cliques no mapa e adicionar marcadores
-map.on('click', function (e) {
-    const { lat, lng } = e.latlng;
 
-    // Adiciona um marcador na posição clicada
-    const newMarker = L.marker([lat, lng]).addTo(map);
-    userMarkers.push(newMarker);
 
-    // Associa um popup simples ao novo marcador
-    newMarker.bindPopup('<b>Marcador Adicionado!</b><br>Clique em outro local ou finalize.');
 
-    // Quando o marcador é clicado, ele pode exibir mais informações posteriormente
-    attachPopup(newMarker, userMarkers.length - 1);
-});
 
-// Botão para finalizar e redirecionar
-const finishButton = document.createElement('button');
-finishButton.textContent = 'Finalizar e Continuar';
-finishButton.style.position = 'absolute';
-finishButton.style.top = '10px';
-finishButton.style.right = '10px';
-finishButton.style.zIndex = '1000';
-finishButton.style.padding = '10px';
-finishButton.style.backgroundColor = 'white';
-finishButton.style.border = '1px solid black';
-finishButton.style.cursor = 'pointer';
-document.body.appendChild(finishButton);
 
-finishButton.addEventListener('click', () => {
-    // Redireciona para outra página passando as coordenadas via URL
-    const markerPositions = userMarkers.map(marker => marker.getLatLng());
-    const positionsString = encodeURIComponent(JSON.stringify(markerPositions));
-    window.location.href = `add_feedback.html?positions=${positionsString}`;
-});
 
 
 
