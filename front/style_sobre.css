@@ -1,108 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 @media  screen and (min-width: 390px) and (max-width: 844px){ 
 
-    *{
+    * {
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
     }
     
-    body{
-        
-        width: 390px;
-        height: 844px;
-        
-        
+    body {
+        width: 100vw;
+        height: 100vh;
         background-color: #265DFF;
-        
     }
-
-    #nav{
-        background-color: #1a4ce3!important;
-        font-family: 'Kavoon';
+    
+    #nav {
+        background-color: #1a4ce3 !important;
+        font-family: 'Kavoon', sans-serif;
     }
-
-    a{
-        color: #89c853!important;
+    
+    a {
+        color: #89c853 !important;
     }
-
-    #log{
+    
+    #log {
         position: relative;
         width: 22vh;
         height: 22vh;
         left: 26vw;
         top: 3vw;
     }
-
-    #title{
+    
+    #title {
         position: relative;
-        left: 39.6vw;
-        top: 10vw;
-        font-family: 'Kavoon';
+        left: 50%;
+        top: 5vh;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
         color: #89c853;
+        font-size: 8vw;
+        text-align: center;
     }
-
-    #text{
-        font-family: 'Kavoon';
+    
+    #text {
+        font-family: 'Kavoon', sans-serif;
         color: #89c853;
         position: relative;
         top: 7vh;
-        font-size: 14px;
+        font-size: 4vw;
         text-align: justify;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+        padding: 0 5%;
+        line-height: 1.5;
+    }    
 }
 
 @media  screen and (min-width: 1024px){ 
 
-    *{
+    * {
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
     }
     
-    body{
-        
-        width: 1024px;
-        height: 844px;
-        
-        
+    body {
+        width: 100vw;
+        height: 100vh;
         background-color: #265DFF;
-        
     }
-
-    #nav{
-        background-color: #1a4ce3!important;
-        font-family: 'Kavoon';
+    
+    #nav {
+        background-color: #1a4ce3 !important;
+        font-family: 'Kavoon', sans-serif;
     }
-
-    a{
-        color: #89c853!important;
+    
+    a {
+        color: #89c853 !important;
     }
-
-    #log{
+    
+    #log {
         position: relative;
-        width: 22vh;
-        height: 22vh;
-        left: 41vw;
+        width: 28vh;
+        height: 28vh;
+        left: 39.5vw;
         top: 3vw;
     }
-
-    #title{
+    
+    #title {
         position: relative;
-        left: 44.4vw;
-        top: 10vw;
-        font-family: 'Kavoon';
+        left: 46.7%;
+        top: 6vh;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
         color: #89c853;
+        font-size: 3vw;
+        text-align: center;
     }
-
-    #text{
-        font-family: 'Kavoon';
+    
+    #text {
+        font-family: 'Kavoon', sans-serif;
         color: #89c853;
         position: relative;
-        top: 15vh;
-        font-size: 14px;
+        top: 7vh;
+        font-size: 1.8vw;
         text-align: justify;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 5%;
+        line-height: 1.5;
     }
+    
 }

@@ -2,459 +2,285 @@
 
  @media  screen and (min-width: 390px) and (max-width: 844px){ 
     
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     
-    body{
-        /* iPhone 13 / 13 Pro - 1 */
-        
+    body {
         position: relative;
-        width: 390px;
-        height: 844px;
-        align-items: center;
-        
+        width: 100vw;
+        height: 100vh;
         background-color: #265DFF;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
-    #entrar{
-        /* Rectangle 4 */
-        
+    #entrar {
         position: absolute;
+        width: 30%;
+        height: 4%;
         left: 35%;
-        right: 40%;
         top: 80%;
-        bottom: 15%;
-        
-        
         background: #3526FF;
-        border-radius: 20px;
-        border-color: rgba(0, 26, 255, 0);
-        /* Entrar */
-
-
-        font-family: 'Kavoon';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 25px;
+        border-radius: 4vw;
+        border: none;
+        font-family: 'Kavoon', sans-serif;
+        font-size: 4.5vw;
+        line-height: 3vw;
         text-align: center;
-
         color: #FFFFFF;
-
-
-        }
-
-    #fsc{
-        /* Rectangle 3 */
+    }
     
+    #fsc {
         position: absolute;
-        left: 25%;
-        right: 30%;
+        width: 40%;
+        height: 6%;
+        left: 30%;
         top: 93%;
-        bottom: -2%;
-        
         background: #3526FF;
-        border-radius: 20px;
-        border-color: rgba(0, 26, 255, 0);
-        
-        /* Faça o seu cadastro */
-        
-        font-family: 'Kavoon';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 30px;
+        border-radius: 7vw;
+        border: none;
+        font-family: 'Kavoon', sans-serif;
+        font-size: 4vw;
+        line-height: 3vw;
         text-align: center;
-        justify-content: center;
-        
-        color:#FFFFFF;
-        
-        
+        color: #FFFFFF;
     }
-
-#npl{
-    /* Não possui login? */
     
-    position: absolute;
-    width: 33vh;
-    left: calc(50% - 291px/2 - 0.5px);
-    top: 87.2vh;
-
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    justify-content: center;
-
-    color: #FFFFFF;
-
-
-}
-
-#em{
-    /* Email: */
-    
-    position: absolute;
-    width: 15vh;
-    height: 50vh;
-    left: calc(50% - 139px/2 - 0.5px);
-    top: 58vh;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    
-    color: #89c853;
-    
-    
-}
-
-#sn{
-    /* Senha: */
-    
-    position: absolute;
-    width: 15vh;
-    height: 50vh;
-    left: calc(50% - 139px/2 - 0.5px);
-    top: 66vh;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-
-    color: #89c853;
-
-
-}
-
-
-#email{
-    /* Rectangle 1 */
-    
-    box-sizing: border-box;
-    
-    position: absolute;
-    width: 26vh;
-    height: 3vh;
-    left: calc(48% - 214px/2);
-    top: 523px;
-    justify-content: center;
-    
-    background: #FFFFFF;
-    border: 2px solid #89c853;
-    border-radius: 10px;
-    
-}
-
-#senha{
-    /* Rectangle 2 */
-    
-    box-sizing: border-box;
-    
-    position: absolute;
-    width: 26vh;
-    height: 3vh;
-    left: calc(48% - 214px/2);
-    top: 70.3vh;
-    justify-content: center;
-    
-    background: #FFFFFF;
-    border: 2px solid #89c853;
-    border-radius: 10px;
-    
-}
-
-#logo{
-    /* Design sem nome (5) 1 */
-    
-    position: absolute;
-width: 186px;
-height: 174px;
-left: calc(50% - 186px/2);
-top: 109px;
-
-}
-
-#title1{
-    /* Seja bem vindo ao: */
-    
-    position: absolute;
-    width: 289px;
-    height: 41px;
-    left: calc(50% - 289px/2 - 0.5px);
-    top: 48px;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    
-    color: #89c853;
-    
-}
-
-#title2{
-    /* RIVERMAP */
-    
-    position: absolute;
-    width: 273px;
-    height: 41px;
-    left: calc(50% - 273px/2 - 0.5px);
-    top: 299px;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    
-    color: #89c853;
-    
-    
+    #npl {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 87.2vh;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 5vw;
+        line-height: 3vw;
+        text-align: center;
+        color: #FFFFFF;
     }
- } 
-
+    
+    #em,
+    #sn {
+        position: absolute;
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 5vw;
+        line-height: 2.5vw;
+        text-align: center;
+        color: #89c853;
+    }
+    
+    #em {
+        top: 59vh;
+    }
+    
+    #sn {
+        top: 68vh;
+    }
+    
+    #email,
+    #senha {
+        box-sizing: border-box;
+        position: absolute;
+        width: 50%;
+        height: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        border: 0.2vw solid #89c853;
+        border-radius: 3vw;
+    }
+    
+    #email {
+        top: 62vh;
+    }
+    
+    #senha {
+        top: 70.3vh;
+    }
+    
+    #logo {
+        position: absolute;
+        width: 38vw;
+        height: auto;
+        left: 50%;
+        top: 12%;
+        transform: translateX(-50%);
+    }
+    
+    #title1 {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 8vw;
+        line-height: 4vw;
+        text-align: center;
+        color: #89c853;
+    }
+    
+    #title2 {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 32%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 7vw;
+        line-height: 4vw;
+        text-align: center;
+        color: #89c853;
+    }
+    
+ }
 
 /* Responsivo para desktop */
  @media  screen and (min-width: 1024px){ 
     
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     
-    body{
-        /* iPhone 13 / 13 Pro - 1 */
-        
+    body {
         position: relative;
-        width: 1024px;
-        height: 844px;
-        
-        
-        background-color: #265DFF;        
+        width: 100vw;
+        height: 100vh;
+        background-color: #265DFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
-    #entrar{
-        /* Rectangle 4 */
-        
+    #entrar {
         position: absolute;
-        left: 40%;
-        right: 40%;
-        top: 78%;
-        bottom: 17%;
-        
-        
+        width: 30%;
+        height: 7%;
+        left: 35%;
+        top: 80%;
         background: #3526FF;
-        border-radius: 20px;
-        border-color: rgba(0, 26, 255, 0);
-        /* Entrar */
-
-
-        font-family: 'Kavoon';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 25px;
+        border-radius: 2vw;
+        border: none;
+        font-family: 'Kavoon', sans-serif;
+        font-size: 2.5vw;
+        line-height: 3vw;
         text-align: center;
-
         color: #FFFFFF;
-
-
-        }
-
-    #fsc{
-        /* Rectangle 3 */
+    }
     
+    #fsc {
         position: absolute;
-        left: 40%;
-        right: 44%;
-        top: 92%;
-        bottom: -1%;
-        width: 23vh;
-        
+        width: 40%;
+        height: 7%;
+        left: 30%;
+        top: 93%;
         background: #3526FF;
-        border-radius: 20px;
-        border-color: rgba(0, 26, 255, 0);
-        
-        /* Faça o seu cadastro */
-        
-        font-family: 'Kavoon';
-        font-style: normal;
-       
-        font-size: 24px;
-        line-height: 3.6vh;
+        border-radius: 2vw;
+        border: none;
+        font-family: 'Kavoon', sans-serif;
+        font-size: 2.5vw;
+        line-height: 3vw;
         text-align: center;
-        
         color: #FFFFFF;
-        
-        
     }
-
-    #npl{
-        /* Não possui login? */
-        
+    
+    #npl {
         position: absolute;
-        width: 34vh;
-        left: calc(50% - 291px/2 - 0.5px);
-        top: 85.9vh;
-
-        font-family: 'Kavoon';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 30px;
+        width: 80%;
+        left: 50%;
+        top: 87.2vh;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 2.5vw;
+        line-height: 3vw;
         text-align: center;
-        justify-content: center;
-
         color: #FFFFFF;
-
-
     }
-
-#em{
-    /* Email: */
     
-    position: absolute;
-    width: 16vh;
-    height: 50vh;
-    left: calc(50% - 139px/2 - 0.5px);
-    top: 58vh;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    
-    color: #89c853;
-    
-    
-}
-
-#sn{
-    /* Senha: */
-    
-    position: absolute;
-    width: 16vh;
-    height: 50vh;
-    left: calc(50% - 139px/2 - 0.5px);
-    top: 66vh;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-
-    color: #89c853;
-
-
-}
-
-
-#email{
-    /* Rectangle 1 */
-    
-    box-sizing: border-box;
-    
-    position: absolute;
-    width: 26vh;
-    height: 3vh;
-    left: calc(50% - 214px/2);
-    top: 523px;
-    justify-content: center;
-    
-    background: #FFFFFF;
-    border: 2px solid #89c853;
-    border-radius: 10px;
-    
-}
-
-#senha{
-    /* Rectangle 2 */
-    
-    box-sizing: border-box;
-    
-    position: absolute;
-    width: 26vh;
-    height: 3vh;
-    left: calc(50% - 214px/2);
-    top: 70.3vh;
-    justify-content: center;
-    
-    background: #FFFFFF;
-    border: 2px solid #89c853;
-    border-radius: 10px;
-    
-}
-
-#logo{
-    /* Design sem nome (5) 1 */
-    
-    position: absolute;
-width: 186px;
-height: 174px;
-left: calc(50% - 186px/2);
-top: 109px;
-
-}
-
-#title1{
-    /* Seja bem vindo ao: */
-    
-    position: absolute;
-    width: 289px;
-    height: 41px;
-    left: calc(50% - 289px/2 - 0.5px);
-    top: 48px;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    
-    color: #89c853;
-    
-}
-
-#title2{
-    /* RIVERMAP */
-    
-    position: absolute;
-    width: 273px;
-    height: 41px;
-    left: calc(50% - 273px/2 - 0.5px);
-    top: 299px;
-    
-    font-family: 'Kavoon';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    
-    color: #89c853;
-    
-    
+    #em,
+    #sn {
+        position: absolute;
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 2vw;
+        line-height: 2.5vw;
+        text-align: center;
+        color: #89c853;
     }
+    
+    #em {
+        top: 58vh;
+    }
+    
+    #sn {
+        top: 66vh;
+    }
+    
+    #email,
+    #senha {
+        box-sizing: border-box;
+        position: absolute;
+        width: 40%;
+        height: 3vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        border: 0.2vw solid #89c853;
+        border-radius: 1vw;
+    }
+    
+    #email {
+        top: 62vh;
+    }
+    
+    #senha {
+        top: 70.3vh;
+    }
+    
+    #logo {
+        position: absolute;
+        width: 25vw;
+        height: auto;
+        left: 50%;
+        top: 12%;
+        transform: translateX(-50%);
+    }
+    
+    #title1 {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 3.5vw;
+        line-height: 4vw;
+        text-align: center;
+        color: #89c853;
+    }
+    
+    #title2 {
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 48%;
+        transform: translateX(-50%);
+        font-family: 'Kavoon', sans-serif;
+        font-size: 3.5vw;
+        line-height: 4vw;
+        text-align: center;
+        color: #89c853;
+    }
+    
  } 
