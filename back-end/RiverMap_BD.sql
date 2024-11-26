@@ -25,4 +25,13 @@ CREATE TABLE feedbacks(
     foreign key (id_user) references users_rvmap(id)
 );
 
+CREATE TABLE marcadores(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	latitude DECIMAL(9, 6) NOT NULL,
+	longitude DECIMAL(9, 6) NOT NULL
+);
+
+INSERT INTO marcadores (latitude, longitude)
+VALUES ('-29.757926', ' -51.149658');
+
 select * from feedbacks;

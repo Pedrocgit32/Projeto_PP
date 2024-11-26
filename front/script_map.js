@@ -9,6 +9,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Array para armazenar os marcadores adicionados pelo usuário
 let userMarkers = [];
 
+
+//Puxar do banco de dados, GET. Vai fazer um foreach e substituir os campos de lat e long
+
+
+const newMarker = L.marker([-29.757926, -51.149658]).addTo(map);
+userMarkers.push(newMarker);
+
+
 // Evento para capturar cliques no mapa e adicionar marcadores
 map.on('click', function (e) {
     const { lat, lng } = e.latlng;
