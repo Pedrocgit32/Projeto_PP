@@ -4,10 +4,12 @@ async function storeFeed(request, response) {
     const params = Array(
         request.file.filename,
         request.body.id_user,
-        request.body.comment
+        request.body.comment,
+        request.body.latitude,
+        request.body.longitude
         );
         
-        const query = "INSERT INTO feedbacks(file,id_user,comment) VALUES(?,?,?);";
+        const query = "INSERT INTO feedbacks(file,id_user, comment, latitude, longitude) VALUES(?,?,?,?,?);";
         
         connection.query(query, params, (err, results) => {
             console.log(err, results)

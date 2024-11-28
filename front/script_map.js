@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 // Cria o mapa e define a visualização inicial
 var map = L.map('map').setView([-29.75831429389668, -51.15101134694835], 13);
 
@@ -12,25 +14,50 @@ let userMarkers = [];
 
 //Puxar do banco de dados, GET. Vai fazer um foreach e substituir os campos de lat e long
 
+async function userMarkers() {
+    try {
+        const response = await fetch('http://localhost:3005/api/marker', {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
 
-const newMarker = L.marker([-29.757926, -51.149658]).addTo(map);
-userMarkers.push(newMarker);
+        const results = await response.json();
+
+        if (results.success) {
+            const markers = results.data;
+
+            markers.forEach(marker => {
+                const newMarker = L.marker([marker.latitude, marker.longitude]).addTo(map);
+                userMarkers.push(newMarker); // Adiciona o marcador na lista
+            });
+        } else {
+            alert('Ops, não foi possível carregar os marcadores!');
+        }
+    } catch (error) {
+        console.error('Erro ao obter os marcadores:', error);
+    }
+}
+
+// const newMarker = L.marker([-29.757926, -51.149658]).addTo(map);
+// userMarkers.push(newMarker);
 
 
-// Evento para capturar cliques no mapa e adicionar marcadores
-map.on('click', function (e) {
-    const { lat, lng } = e.latlng;
+// // Evento para capturar cliques no mapa e adicionar marcadores
+// map.on('click', function (e) {
+//     const { lat, lng } = e.latlng;
 
-    // Adiciona um marcador na posição clicada
-    const newMarker = L.marker([lat, lng]).addTo(map);
-    userMarkers.push(newMarker);
+//     // Adiciona um marcador na posição clicada
+//     const newMarker = L.marker([lat, lng]).addTo(map);
+//     userMarkers.push(newMarker);
 
-    // Associa um popup simples ao novo marcador
-    newMarker.bindPopup('<b>Marcador Adicionado!</b><br>Clique em outro local ou finalize.');
+//     // Associa um popup simples ao novo marcador
+//     newMarker.bindPopup('<b>Marcador Adicionado!</b><br>Clique em outro local ou finalize.');
 
-    // Quando o marcador é clicado, ele pode exibir mais informações posteriormente
-    attachPopup(newMarker, userMarkers.length - 1);
-});
+//     // Quando o marcador é clicado, ele pode exibir mais informações posteriormente
+//     attachPopup(newMarker, userMarkers.length - 1);
+// });
 
 // Função para exibir o popup em marcadores personalizados
 async function attachPopup(marker, index) {
