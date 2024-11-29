@@ -2,7 +2,7 @@ function previewImage(event) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             const image = document.getElementById('image');
             image.src = e.target.result;
         };
@@ -14,24 +14,34 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     let formData = new FormData();
+    const latlong = localStorage.getItem('latlong'); // Obtém latlong armazenada no localStorage
+    if (!latlong) {
+        alert("Localização não encontrada! Verifique se o GPS está ativado.");
+        return;
+    }
 
-    formData.append('file', document.getElementById('file').files[0]); // Corrigido para usar .files
+    const [latitude, longitude] = latlong.split(','); // Divide latitude e longitude
+    formData.append('file', document.getElementById('file').files[0]);
     formData.append('comment', document.getElementById('feed').value);
     formData.append('id_user', 1);
+    formData.append('latitude', latitude.trim()); // Adiciona latitude ao formData
+    formData.append('longitude', longitude.trim()); // Adiciona longitude ao formData
 
-    console.log(formData.get('file'))
-    console.log(formData.get('comment'))
+    console.log("File:", formData.get('file'));
+    console.log("Comment:", formData.get('comment'));
+    console.log("Latitude:", formData.get('latitude'));
+    console.log("Longitude:", formData.get('longitude'));
+
     try {
         const response = await fetch("http://localhost:3005/api/store/feed", {
             method: "POST",
-            // headers: { "Content-Type": "application/json;charset=UTF-8" },
             body: formData
         });
 
-        const result = await response.json(); // Adicionado await
+        const result = await response.json();
 
         if (result.success) {
-            console.log(result.message)
+            console.log(result.message);
             window.location.href = "/front/map.html";
         } else {
             alert(result.message);
@@ -47,10 +57,10 @@ async function handleSubmit(event) {
 async function getPosts() {
     const response = await fetch('http://localhost:3005/api/posts', {
         method: "GET",
-        headers: "Content-Type:application/json"
-    })
+        headers: { "Content-Type": "application/json" }
+    });
 
-    const results = response.json();
+    const results = await response.json();
 
     console.log(results.data);
-} 
+}

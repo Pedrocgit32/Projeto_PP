@@ -15,6 +15,7 @@ map.on('click', async function (e)  {
         window.location.href = 'feedback/add_feedback.html'; // Substitua pelo URL desejado
     }, 1000); // Tempo de espera opcional (1 segundo)
 
+    localStorage.setItem('latlong', e.latlng)
     const { lat, lng } = e.latlng;
     const newMarker = L.marker([lat, lng]).addTo(map);
     let userMarkers = []
